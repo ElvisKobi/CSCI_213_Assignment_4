@@ -67,9 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\KarateSchool.mdf" />
-    <Content Include="App_Data\KarateSchool_log.ldf">
-      <DependentUpon>KarateSchool.mdf</DependentUpon>
+    <Content Include="App_Data\KarateSchool%281%29.mdf" />
+    <Content Include="App_Data\KarateSchool%281%29_log.ldf">
+      <DependentUpon>KarateSchool%281%29.mdf</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
