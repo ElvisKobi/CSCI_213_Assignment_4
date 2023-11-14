@@ -74,7 +74,7 @@
       <DependentUpon>KarateSchool%281%29.mdf</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
-
+    <Content Include="Member.aspx. />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -100,7 +100,12 @@
     <Compile Include="karateSchool.Master.designer.cs">
       <DependentUpon>karateSchool.Master</DependentUpon>
     </Compile>
-
+    <Compile Include="Member.aspx.cs">
+      <DependentUpon>Member.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member.aspx.designer.cs">
+      <DependentUpon>Member.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
