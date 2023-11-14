@@ -74,7 +74,7 @@
       <DependentUpon>KarateSchool%281%29.mdf</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
-    <Content Include="Member.aspx. />
+    <Content Include="Member.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
