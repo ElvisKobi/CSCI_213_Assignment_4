@@ -58,9 +58,9 @@ namespace Assignment_4
             dbcon = new KarateSchoolDataContext(conn);
 
             // Create Instance of the Member Table
-            Member NewMember = new Member();
-            NetUser user = new NetUser();
-            NewMember.Member_UserID = NetUser.
+            //Member NewMember = new Member();
+           // NetUser user = new NetUser();
+            //NewMember.Member_UserID = NetUser.
         }
 
         protected void MemberFirstNameTxt_TextChanged(object sender, EventArgs e)
