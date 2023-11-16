@@ -42,6 +42,22 @@
     <p>
         Add Member</p>
     <p>
+        <asp:Label ID="Label6" runat="server" Text="User Name"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="usernameTextBox" runat="server"></asp:TextBox>
+    </p>
+    <p>
+        <asp:Label ID="Label7" runat="server" Text="Password"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="passwordTextBox" runat="server"></asp:TextBox>
+    </p>
+    <p>
+        <asp:Label ID="Label8" runat="server" Text="User Type"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:DropDownList ID="usertypeDropDown" runat="server">
+        </asp:DropDownList>
+    </p>
+    <p>
         <asp:Label ID="Label1" runat="server" Text="First Name"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="MemberFirstNameTxt" runat="server" OnTextChanged="MemberFirstNameTxt_TextChanged"></asp:TextBox>

@@ -1,20 +1,19 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/karateSchool.Master" AutoEventWireup="true" CodeBehind="Member.aspx.cs" Inherits="Assignment_4.Member" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/karateSchool.Master" AutoEventWireup="true" CodeBehind="Instructor.aspx.cs" Inherits="Assignment_4.Instructor1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
-            font-size: large;
+            font-size: x-large;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
-        <br class="auto-style1" />
-         <span class="auto-style1">&nbsp;&nbsp;Member</span></p>
+        &nbsp;&nbsp;<span class="auto-style1">Instructor</span><br />
+    </p>
     <p>
-        &nbsp;Hello,&nbsp;
-        <asp:Label ID="fnameLabel" runat="server" Text="FirstName"></asp:Label>
-&nbsp;
-        <asp:Label ID="lnameLabel" runat="server" Text="LastName"></asp:Label>
+        Hello,
+        <asp:Label ID="FnameLabel" runat="server" Text="FirstName"></asp:Label>
+&nbsp;<asp:Label ID="lnameLabel" runat="server" Text="LastName"></asp:Label>
     </p>
     <p>
         <asp:GridView ID="resultGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
@@ -30,6 +29,8 @@
             <SortedDescendingCellStyle BackColor="#D4DFE1" />
             <SortedDescendingHeaderStyle BackColor="#15524A" />
         </asp:GridView>
+    </p>
+    <p>
     </p>
     <p>
     </p>
