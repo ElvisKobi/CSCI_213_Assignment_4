@@ -52,7 +52,6 @@ C:\Users\elvis\source\repos\CSCI_213_Assignment_4\bin\roslyn\vbc.exe.config
 C:\Users\elvis\source\repos\CSCI_213_Assignment_4\bin\roslyn\vbc.rsp
 C:\Users\elvis\source\repos\CSCI_213_Assignment_4\bin\roslyn\VBCSCompiler.exe
 C:\Users\elvis\source\repos\CSCI_213_Assignment_4\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\elvis\source\repos\CSCI_213_Assignment_4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\elvis\source\repos\CSCI_213_Assignment_4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\elvis\source\repos\CSCI_213_Assignment_4\obj\Debug\Assignment_4.csproj.CopyComplete
 C:\Users\elvis\source\repos\CSCI_213_Assignment_4\obj\Debug\Assignment_4.dll

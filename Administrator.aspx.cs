@@ -19,17 +19,13 @@ namespace Assignment_4
 
         public void Refresh()
         {
-            string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\" +
-                          "Users\\elvis\\OneDrive\\Desktop\\Project 4\\Assignment_4\\App_Data\\" +
-                          "KarateSchool(1).mdf\";Integrated Security=True";
-
+            string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\elvis\\source\\repos\\CSCI_213_Assignment_4\\App_Data\\KarateSchool(1).mdf;Integrated Security=True";
             dbcon = new KarateSchoolDataContext(conn);
             dbcon2 = new KarateSchoolDataContext(conn);
 
             // Select all records from the member table
             var result = from item in dbcon.Members
-                         orderby item.MemberFirstName, item.MemberLastName, item.MemberPhoneNumber, item.MemberDateJoined
-                         select item;
+                                                  select item;
 
             // Add it to the GridView1
             GridView1.DataSource = result;
