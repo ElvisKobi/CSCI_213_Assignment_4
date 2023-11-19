@@ -18,8 +18,8 @@ namespace Assignment_4
             //create database connection
             dbcon = new KarateSchoolDataContext(conn);
 
-            //TODO -- get InstructorID from session
-            int instructorID = 3;
+            //get InstructorID from session
+            int instructorID = Convert.ToInt32(HttpContext.Current.Session["userID"]);
 
             //find member in table
             var instructor = (from x in dbcon.Instructors

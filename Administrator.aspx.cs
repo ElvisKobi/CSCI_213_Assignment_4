@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.EnterpriseServices;
 using System.Linq;
 using System.Web;
@@ -18,42 +20,64 @@ namespace Assignment_4
 
         public void Refresh()
         {
-            string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\" +
-                          "Users\\elvis\\OneDrive\\Desktop\\Project 4\\Assignment_4\\App_Data\\" +
-                          "KarateSchool(1).mdf\";Integrated Security=True";
+            string conn = ConnectionString.conn;
 
             dbcon = new KarateSchoolDataContext(conn);
 
-            // Select all records from the member table
-            var result = from item in dbcon.Members
-                         orderby item.MemberFirstName, item.MemberLastName, item.MemberPhoneNumber, item.MemberDateJoined
-                         select item;
+            //Fill GridView
+            using (SqlConnection dbconn = new SqlConnection(conn))
+            {
+                string query = "select MemberFirstName, MemberLastName, MemberPhoneNumber, MemberDateJoined " +
+                    "from Member";
 
-            // Add it to the GridView1
-            GridView1.DataSource = result;
-            GridView1.DataBind();
+                //define the SqlCommand object
+                SqlCommand cmd = new SqlCommand(query, dbconn);
 
-            // Select all Records from the Instructors Table
-            var instructor = from item in dbcon.Instructors
-                                    orderby item.InstructorFirstName, item.InstructorLastName
-                                    select new
-                                    {
-                                        item.InstructorFirstName,
-                                        item.InstructorLastName
-                                    };
 
-            // Add it to the GridView2
-            GridView2.DataSource = instructor;
-            GridView2.DataBind();
-            
+                //set the SqlDataAdapter object
+                SqlDataAdapter dAdapter = new SqlDataAdapter(cmd);
+
+                //define dataset
+                DataSet ds = new DataSet();
+
+                //fill dataset with query results
+                dAdapter.Fill(ds);
+
+                //set the DataGridView control's data source/data table
+                GridView1.DataSource = ds.Tables[0];
+
+                GridView1.DataBind();
+
+                string query2 = "select InstructorFirstName, InstructorLastName " +
+                    "from Instructor";
+
+                //define the SqlCommand object
+                SqlCommand cmd2 = new SqlCommand(query2, dbconn);
+
+
+                //set the SqlDataAdapter object
+                SqlDataAdapter dAdapter2 = new SqlDataAdapter(cmd2);
+
+                //define dataset
+                DataSet ds2 = new DataSet();
+
+                //fill dataset with query results
+                dAdapter2.Fill(ds2);
+
+                //set the DataGridView control's data source/data table
+                GridView2.DataSource = ds2.Tables[0];
+
+                GridView2.DataBind();
+
+                //close connection
+                dbconn.Close();
+            }
 
         }
 
         protected void MemberCreateBtn_Click(object sender, EventArgs e)
         {
-            string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\" +
-                         "Users\\elvis\\OneDrive\\Desktop\\Project 4\\Assignment_4\\App_Data\\" +
-                         "KarateSchool(1).mdf\";Integrated Security=True";
+            string conn = ConnectionString.conn;
 
             dbcon = new KarateSchoolDataContext(conn);
 
