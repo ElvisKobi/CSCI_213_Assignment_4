@@ -20,7 +20,7 @@ namespace Assignment_4
             dbcon = new KarateSchoolDataContext(conn);
 
             //TODO -- get MemberID from session
-            int memberID = 1;
+            int memberID = Convert.ToInt32(HttpContext.Current.Session["userID"]);
 
             //find member in table
             var member = (from x in dbcon.Members

@@ -75,6 +75,7 @@
     </Content>
     <Content Include="Global.asax" />
     <Content Include="Instructor.aspx" />
+    <Content Include="Logon.aspx" />
     <Content Include="Member.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -108,6 +109,13 @@
     </Compile>
     <Compile Include="karateSchool.Master.designer.cs">
       <DependentUpon>karateSchool.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Logon.aspx.cs">
+      <DependentUpon>Logon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logon.aspx.designer.cs">
+      <DependentUpon>Logon.aspx</DependentUpon>
     </Compile>
     <Compile Include="Member.aspx.cs">
       <DependentUpon>Member.aspx</DependentUpon>
