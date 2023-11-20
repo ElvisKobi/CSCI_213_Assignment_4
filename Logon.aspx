@@ -11,11 +11,11 @@
         <br />
 &nbsp; <span class="auto-style1">&nbsp;Login</span></p>
 &nbsp;&nbsp; Username:&nbsp;&nbsp;
-    <asp:TextBox ID="usernameTextBox" runat="server"></asp:TextBox>
+    <asp:TextBox ID="usernameTextBox" runat="server" OnTextChanged="usernameTextBox_TextChanged"></asp:TextBox>
 &nbsp;<p>
     </p>
     <p>
-        &nbsp;&nbsp; Password:&nbsp;&nbsp; &nbsp;<asp:TextBox ID="passwordTextBox" runat="server"></asp:TextBox>
+        &nbsp;&nbsp; Password:&nbsp;&nbsp; &nbsp;<asp:TextBox ID="passwordTextBox" runat="server" OnTextChanged="passwordTextBox_TextChanged" TextMode="Password"></asp:TextBox>
     </p>
 <p>
         &nbsp;</p>
