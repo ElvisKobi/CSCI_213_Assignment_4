@@ -50,5 +50,15 @@ namespace Assignment_4
                 Response.Redirect("Administrator.aspx", true);
             }
         }
+
+        protected void usernameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            errorlbl.Text = "";
+        }
+
+        protected void passwordTextBox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
